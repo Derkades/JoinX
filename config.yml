@@ -1,0 +1,3 @@
+# {x} is player name
+join: "&b&l{x} &3&lhas joined."
+quit: "&b&l{x} &3&lhas left."

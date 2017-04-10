@@ -1,0 +1,5 @@
+name: JoinX
+main: com.robinmc.joinx.Main
+version: 0.1.0
+author: Derkades
+description: 'A simple plugin to set join & quit messages'
