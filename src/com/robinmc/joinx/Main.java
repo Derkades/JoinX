@@ -2,6 +2,7 @@ package com.robinmc.joinx;
 
 import org.bukkit.ChatColor;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
@@ -22,12 +23,12 @@ public class Main extends JavaPlugin implements Listener {
 		QUIT_MESSAGE = colors(super.getConfig().getString("quit"));
 	}
 	
-	@EventHandler
+	@EventHandler(priority = EventPriority.HIGHEST)
 	public void onJoin(PlayerJoinEvent event){
 		event.setJoinMessage(JOIN_MESSAGE.replace("{x}", event.getPlayer().getName()));
 	}
 	
-	@EventHandler
+	@EventHandler(priority = EventPriority.HIGHEST)
 	public void onQuit(PlayerQuitEvent event){
 		event.setQuitMessage(QUIT_MESSAGE.replace("{x}", event.getPlayer().getName()));
 	}
